@@ -1,0 +1,250 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 60px;
+}
+
+/* Navigation bar */
+#navbar{
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+}
+
+/* Navigation bar:logo and image */
+#logo{
+    margin: 10px 15px;
+}
+#logo img{
+    margin: 5px 10px;
+    height: 80px;
+    width: 75px;
+
+    /* to make my logo circular */
+    border-radius: 60%;
+}
+
+/* Navigation bar: list styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Fruktur', cursive;
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(49, 49, 49);
+    position: absolute;
+    /* to remove the space which was forming on reducing height */
+    top: 0;
+    left: 0;
+    height: 95%;
+    width: 100%;
+    /* to bring the content above this black background */
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    /* padding: 10px; */
+
+    
+}
+
+/* giving padding here because if we give it in li(above one) then when a person will hover his mouse in the padding area no hovering effects will occur and also the mouse icon will not change into hand icon when in the padding area */
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none; 
+    border-radius: 20px;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 210px;
+    height: 588px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+#home::before{
+    content: "";
+    background: url('../bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 722px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+}
+
+#home p{
+    /* color: white; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Services Section */
+
+#services{
+    margin: 30px;
+    display: flex;
+}
+
+#services .box{
+    padding: 15px;
+    margin: 8px;
+    box-shadow: 5px 5px 15px;
+    border-radius: 10px;
+    background: rgb(233, 224, 224);
+}
+
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+/* client section */
+
+#client-section{
+    position: relative;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(../bg1.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 10px;
+}
+#clients img{
+    height: 130px;
+    margin: 30px;
+}
+
+/* Contact section */
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('../contact.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4 ;
+
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact-box form{
+    width: 50%;
+}
+
+#contact-box label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 17px 40px;
+    height: 20px;
+    justify-content: center;
+}
+
+/* Utility classes */
+
+.h-primary{
+    font-size: 3rem;
+    padding: 10px 10px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.h-secondary{
+    font-size: 2rem;
+    padding: 15px 23px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.btn{
+    padding: 5px 15px;
+    margin: 86px;
+    background-color: aquamarine;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: yellowgreen;
+    box-shadow: 7px 7px 20px rgb(0, 0, 0);
+}
+
+.center{
+    text-align: center;
+}
